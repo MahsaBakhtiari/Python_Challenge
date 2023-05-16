@@ -11,7 +11,7 @@ def file_reader(file_address):
         data = [row[2] for row in reader]
     return data
 
-address= os.path.join(".", "resources", "election_data.csv")
+address= os.path.join(".", "Resources", "election_data.csv")
 data_list = file_reader(address)
 
 # Introduce a dictionary of candidates and their total vote.
@@ -23,7 +23,7 @@ for candid in data_list:
         data_dict[candid] = 1
 
 candid_list = data_dict.keys()
-total = len(data)
+total = len(data_list)
 data_percentage = {}        
 for candid in data_dict.keys():
     data_percentage[candid] = (data_dict[candid]/total)*100
